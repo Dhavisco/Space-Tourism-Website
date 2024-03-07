@@ -9,13 +9,24 @@ const Header = () => {
           <img src={logo} alt="" />
         </div>
         <div className="w-[40%] z-10 ">
-          <hr className="border-t border-white opacity-25 w-full ml-6" />
+          <hr className="border-t border-white opacity-25 w-[95%] ml-14" />
         </div>
-        <div className="links flex justify-around py-6 px-6 w-[90%] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-4 shadow-md bg-[#1a253b5b]">
-          <div>00 Home</div>
-          <div>01 Destination</div>
-          <div>02 Crew</div>
-          <div className="pr-[6rem]">03 Technology</div>
+        <div className="links flex justify-around py-6 px-10 w-[90%] bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-4 shadow-md bg-[#e0e0e01c] uppercase">
+          <div>
+            {" "}
+            <span className="font-bold">00</span> Home
+          </div>
+          <div>
+            {" "}
+            <span className="font-bold">01</span> Destination
+          </div>
+          <div>
+            {" "}
+            <span className="font-bold">02</span> Crew
+          </div>
+          <div className="pr-[6rem]">
+            <span className="font-bold">03</span> Technology
+          </div>
         </div>
       </div>
     </header>
