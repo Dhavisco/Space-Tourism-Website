@@ -50,18 +50,24 @@ const Header = () => {
           >
             <span className="font-bold">01</span> Destination
           </Link>
-          <a
-            href="#"
-            className={`${activeLink === "crew" ? `${classes.active}` : ""}`}
+          <Link
+            to="/crew"
+            className={`${
+              activeLink === "crew"
+                ? "border-b-2 border-white shadow"
+                : "hover:border-b-2 hover:border-[#ffffffd3]"
+            }transition-all duration-100 pb-6`}
             onClick={() => handleSetActiveLink("crew")}
           >
             <span className="font-bold">02</span> Crew
-          </a>
+          </Link>
           <a
             href="#"
             className={`${
-              activeLink === "technology" ? `${classes.active}` : ""
-            }`}
+              activeLink === "technology"
+                ? "border-b-2 border-white shadow"
+                : "hover:border-b-2 hover:border-[#ffffffd3]"
+            }transition-all duration-100 pb-6`}
             onClick={() => handleSetActiveLink("technology")}
           >
             <span className="font-bold">03</span> Technology

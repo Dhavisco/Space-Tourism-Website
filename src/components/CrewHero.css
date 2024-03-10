@@ -1,0 +1,12 @@
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.active {
+  background-color: white;
+}
