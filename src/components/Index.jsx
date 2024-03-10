@@ -1,4 +1,4 @@
-import Header from "./Header";
+// import Header from "./Header";
 import Hero from "./Hero";
 
 
@@ -6,7 +6,7 @@ const Index = () => {
   return (
 
     <div>
-      <Header/>
+      {/* <Header/> */}
       <Hero/>
     </div>
   );

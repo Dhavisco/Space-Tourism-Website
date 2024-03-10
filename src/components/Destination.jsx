@@ -1,12 +1,12 @@
 
 import DestinatonHero from './DestinatonHero';
-import Header from './Header'
+// import Header from './Header'
 
 
 const Destination = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <DestinatonHero />
     </>
   );
