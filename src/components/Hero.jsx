@@ -32,7 +32,7 @@ const Hero = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  });
 
   // Determine background image based on screen size
   let backgroundImage;
