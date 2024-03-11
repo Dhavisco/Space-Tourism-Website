@@ -53,6 +53,7 @@ const TechnologyHero = () => {
           <div className="flex lg:justify-end justify-center rounded-lg overflow-hidden shadow-md">
             <img
               src={currenttechDetails.images.landscape}
+              loading="lazy"
               alt=""
               className="lg:h-[20rem] w-auto md:w-[80%] md:h-auto"
             />

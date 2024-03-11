@@ -24,6 +24,7 @@ const DestinationHero = () => {
           <div className="w-2/3">
             <img
               src={currentDestinationDetails.images.png}
+              loading="lazy"
               alt=""
               className="h-[6rem] lg:h-[20rem] w-auto"
             />

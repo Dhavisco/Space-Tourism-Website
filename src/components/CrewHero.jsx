@@ -66,6 +66,7 @@ const CrewHero = () => {
           <div className="flex justify-center lg:justify-end rounded-lg overflow-hidden shadow-md">
             <img
               src={currentCrewDetails.images.png}
+              loading="lazy"
               alt=""
               className="lg:h-[28rem] h-[15rem] w-auto"
             />
