@@ -1,5 +1,6 @@
 import { useState } from "react";
 import data from "./store/data.json";
+import "../App.css";
 
 const DestinationHero = () => {
   const [currentDestination, setCurrentDestination] = useState("Moon");
@@ -44,10 +45,10 @@ const DestinationHero = () => {
                   </button>
                 ))}
               </nav>
-              <div className="font-light uppercase font-serif text-6xl lg:text-8xl tracking-[0.8rem]">
+              <div className="dname font-light uppercase font-serif sm:text-6xl lg:text-8xl tracking-[0.8rem]">
                 {currentDestinationDetails.name}
               </div>
-              <div className=" lg:w-4/5 w-6/7 md:w-4/5 font-light text-sm lg:text-base text-[#ffffffe0] text-justify lg:leading-relaxed font-sans">
+              <div className="d-desc lg:w-4/5 w-6/7 md:w-4/5 font-light text-sm lg:text-base text-[#ffffffe0] text-justify lg:leading-relaxed font-sans">
                 {currentDestinationDetails.description}
               </div>
               <div className="">

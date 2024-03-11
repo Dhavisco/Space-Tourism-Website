@@ -12,6 +12,23 @@
 
 @media (min-width:300px) {
   .hero {
-    padding: 0 28px; 
+    padding: 0 28px;
   }
+ .dname {
+  font-size: 3.75rem;
+}
+
+}
+
+@media (max-width:300px) {
+  .hero {
+  padding: 0 .5rem;
+}
+
+ .dname {
+  font-size: 2rem;
+}
+.d-desc{
+  max-width: 14rem;
+}
 }
