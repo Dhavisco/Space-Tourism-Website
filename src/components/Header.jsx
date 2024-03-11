@@ -21,16 +21,16 @@ const Header = () => {
           <div className="flex gap-2 md:gap-0 w-[100%] md:pt-5 lg:pt-10 ml-4">
             <div className="md:flex items-center">
               <Link to="/">
-                <img src={logo} alt="Logo" className="h-10 w-auto" />
+                <img src={logo} alt="Logo" className=" h-6 md:h-10 w-auto" />
               </Link>
             </div>
-            <div className="hidden w-[35%] md:flex z-20 items-center lg:relative">
+            <div className="hidden w-[35%] lg:flex z-20 items-center lg:relative">
               <hr className="border-t border-white opacity-25 w-[95%] ml-[3.8rem] lg:absolute z-10" />
             </div>
             <nav
               className={`sm:flex gap-1 md:justify-around text-sm lg:text-xl lg:tracking-wide lg:px-16 md:px-5 lg:w-[65%] md:pr-[5rem] lg:pr-[10rem] ${
                 isMenuOpen ? "flex flex-col sm:flex-row" : "hidden"
-              }  md:bg-[#e0e0e01c] md:bg-clip-padding md:backdrop-filter md:backdrop-blur-lg md:shadow-md`}
+              }  lg:bg-[#e0e0e01c] lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-lg lg:shadow-md`}
             >
               <Link
                 to="/"
