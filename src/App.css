@@ -10,3 +10,8 @@
   background-clip: initial;
 }
 
+@media (min-width:300px) {
+  .hero {
+    padding: 0 28px; 
+  }
+}

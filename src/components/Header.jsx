@@ -28,7 +28,7 @@ const Header = () => {
               <hr className="border-t border-white opacity-25 w-[95%] ml-[3.8rem] lg:absolute z-10" />
             </div>
             <nav
-              className={`sm:flex gap-1 md:justify-between md:items-center text-sm lg:text-lg tracking-wide lg:px-16 md:px-5 lg:w-[65%] md:pr-[5rem] lg:pr-[10rem] ${
+              className={`sm:flex gap-1 md:justify-between md:items-center text-sm lg:text-lg tracking-wide lg:px-16 md:px-5 lg:w-[65%] md:pr-[5rem] lg:pr-[6rem] ${
                 isMenuOpen ? "flex flex-col sm:flex-row" : "hidden"
               }  lg:bg-[#e0e0e01c] lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-lg lg:shadow-md uppercase`}
             >
