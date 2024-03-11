@@ -1,7 +1,7 @@
 import CrewHero from "./CrewHero"
 import bgimgdesk from "../assets/crew/background-crew-desktop.jpg"
 import bgimgtab from "../assets/crew/background-crew-tablet.jpg"
-import bgimgmob from "../assets/crew/background-crew-tablet.jpg";
+import bgimgmob from "../assets/crew/background-crew-mobile.jpg";
 import "../App.css";
 import { useState, useEffect } from "react";
 
