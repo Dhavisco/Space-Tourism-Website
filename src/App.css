@@ -12,7 +12,7 @@
 
 @media (min-width:300px) {
   .hero {
-    padding: 0 28px;
+    padding: 0 25px;
   }
  .dname {
   font-size: 3.75rem;
@@ -25,10 +25,15 @@
   padding: 0 .5rem;
 }
 
+.crewhero {
+  padding-top: 2rem;
+}
+
  .dname {
   font-size: 2rem;
 }
 .d-desc{
   max-width: 14rem;
 }
+
 }

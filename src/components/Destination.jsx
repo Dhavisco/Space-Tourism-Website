@@ -1,4 +1,3 @@
-
 import DestinationHero from "./DestinationHero";
 import bgimgdesk from "../assets/destination/background-destination-desktop.jpg";
 import bgimgmob from "../assets/destination/background-destination-mobile.jpg";
