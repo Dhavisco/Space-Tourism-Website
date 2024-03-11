@@ -1,25 +1,19 @@
 import logo from "../assets/shared/logo.svg"
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
-  // State to track the active link
-  const [activeLink, setActiveLink] = useState("home");
+  const location = useLocation(); // Accessing location object to get the current pathname
 
-  // Function to update the active link
-  const handleSetActiveLink = (link) => {
-    setActiveLink(link);
+  // This function checks if the path argument matches the current location's pathname
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
     <header>
       <div className="flex items-center font-[Bellefair] fixed w-[100%] justify-start z-2 text-white mt-8 ml-8">
         <div>
-          <Link
-            to="/"
-            className={`${activeLink === "home" ? "" : ""}`}
-            onClick={() => handleSetActiveLink("home")}
-          >
+          <Link to="/">
             <img src={logo} alt="" />
           </Link>
         </div>
@@ -30,44 +24,40 @@ const Header = () => {
           <Link
             to="/"
             className={`${
-              activeLink === "home"
+              isActive("/")
                 ? "border-b-2 border-white shadow"
                 : "hover:border-b-2 hover:border-[#ffffffd3]"
-            }transition-all duration-100 pb-6`}
-            onClick={() => handleSetActiveLink("home")}
+            } transition-all duration-100 pb-6`}
           >
             <span className="font-bold">00</span> Home
           </Link>
           <Link
             to="/destination"
             className={`${
-              activeLink === "destination"
+              isActive("/destination")
                 ? "border-b-2 border-white shadow"
                 : "hover:border-b-2 hover:border-[#ffffffd3]"
-            }transition-all duration-100 pb-6`}
-            onClick={() => handleSetActiveLink("destination")}
+            } transition-all duration-100 pb-6`}
           >
             <span className="font-bold">01</span> Destination
           </Link>
           <Link
             to="/crew"
             className={`${
-              activeLink === "crew"
+              isActive("/crew")
                 ? "border-b-2 border-white shadow"
                 : "hover:border-b-2 hover:border-[#ffffffd3]"
-            }transition-all duration-100 pb-6`}
-            onClick={() => handleSetActiveLink("crew")}
+            } transition-all duration-100 pb-6`}
           >
             <span className="font-bold">02</span> Crew
           </Link>
           <Link
-           to="/technology"
+            to="/technology"
             className={`${
-              activeLink === "technology"
+              isActive("/technology")
                 ? "border-b-2 border-white shadow"
                 : "hover:border-b-2 hover:border-[#ffffffd3]"
-            }transition-all duration-100 pb-6`}
-            onClick={() => handleSetActiveLink("technology")}
+            } transition-all duration-100 pb-6`}
           >
             <span className="font-bold">03</span> Technology
           </Link>
@@ -77,4 +67,4 @@ const Header = () => {
   );
 };
 
-export default Header
+export default Header;
