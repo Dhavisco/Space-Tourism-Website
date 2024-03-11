@@ -1,7 +1,12 @@
-import logo from "../assets/shared/logo.svg"
+import logo from "../assets/shared/logo.svg";
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import hamburger from "../assets/shared/icon-hamburger.svg";
+import close from "../assets/shared/icon-close.svg";
+import "./Header.css"
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation(); // Accessing location object to get the current pathname
 
   // This function checks if the path argument matches the current location's pathname
@@ -11,8 +16,85 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex items-center font-[Bellefair] fixed w-[100%] justify-start z-2 text-white mt-8 ml-8">
-        <div>
+      <div className="flex md:items-center font-[Bellefair] fixed w-[100%] md:justify-start z-2 text-white md:mt-8 md:ml-8">
+        <div className="header flex md:items-center font-[Bellefair] fixed w-full z-10 py-4 px-2 lg:bg-transparent text-white">
+          <div className="flex gap-2 md:gap-0 w-[100%] md:pt-5 lg:pt-10 ml-4">
+            <div className="md:flex items-center">
+              <Link to="/">
+                <img src={logo} alt="Logo" className="h-10 w-auto" />
+              </Link>
+            </div>
+            <div className="hidden w-[35%] md:flex z-20 items-center lg:relative">
+              <hr className="border-t border-white opacity-25 w-[95%] ml-[3.8rem] lg:absolute z-10" />
+            </div>
+            <nav
+              className={`sm:flex gap-1 md:justify-around text-sm lg:text-xl lg:tracking-wide lg:px-16 md:px-5 lg:w-[65%] md:pr-[5rem] lg:pr-[10rem] ${
+                isMenuOpen ? "flex flex-col sm:flex-row" : "hidden"
+              }  md:bg-[#e0e0e01c] md:bg-clip-padding md:backdrop-filter md:backdrop-blur-lg md:shadow-md`}
+            >
+              <Link
+                to="/"
+                onClick={() => setIsMenuOpen(false)}
+                className={`${
+                  isActive("/")
+                    ? "border-b-2 w-auto border-white shadow"
+                    : "hover:border-b-2 hover:border-[#ffffffd3]"
+                } transition-all duration-100 px-4 block sm:inline-block hover:text-gray-300 md:py-2 lg:py-6`}
+              >
+                <span className="font-bold">00</span> Home
+              </Link>
+
+              <Link
+                to="/destination"
+                onClick={() => setIsMenuOpen(false)}
+                className={`${
+                  isActive("/destination")
+                    ? "border-b-2 border-white shadow"
+                    : "hover:border-b-2 hover:border-[#ffffffd3]"
+                } transition-all duration-100 px-4 block sm:inline-block hover:text-gray-300 md:py-2 lg:py-6`}
+              >
+                <span className="font-bold">01</span> Destination
+              </Link>
+
+              <Link
+                to="/crew"
+                onClick={() => setIsMenuOpen(false)}
+                className={`${
+                  isActive("/crew")
+                    ? "border-b-2 border-white shadow"
+                    : "hover:border-b-2 hover:border-[#ffffffd3]"
+                } transition-all duration-100 px-4 block sm:inline-block hover:text-gray-300 md:py-2 lg:py-6`}
+              >
+                <span className="font-bold">02</span> Crew
+              </Link>
+              <Link
+                to="/technology"
+                onClick={() => setIsMenuOpen(false)}
+                className={`${
+                  isActive("/technology")
+                    ? "border-b-2 border-white shadow"
+                    : "hover:border-b-2 hover:border-[#ffffffd3]"
+                } transition-all duration-100 px-4 block sm:inline-block hover:text-gray-300 md:py-2 lg:py-6`}
+              >
+                <span className="font-bold">03</span> Technology
+              </Link>
+            </nav>
+          </div>
+          <div className="sm:hidden flex items-start mr-4">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-xl p-2 focus:outline-none"
+            >
+              {isMenuOpen ? (
+                <img src={close} alt="" />
+              ) : (
+                <img src={hamburger} alt="" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* <div>
           <Link to="/">
             <img src={logo} alt="" />
           </Link>
@@ -61,7 +143,7 @@ const Header = () => {
           >
             <span className="font-bold">03</span> Technology
           </Link>
-        </div>
+        </div> */}
       </div>
     </header>
   );
