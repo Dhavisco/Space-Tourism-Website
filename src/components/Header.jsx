@@ -1,5 +1,4 @@
 import logo from "../assets/shared/logo.svg"
-import classes from "./Header.module.css"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -14,11 +13,11 @@ const Header = () => {
 
   return (
     <header>
-      <div className="flex items-center font-sans fixed w-[100%] justify-start z-2 text-white mt-8 ml-8">
+      <div className="flex items-center font-[Bellefair] fixed w-[100%] justify-start z-2 text-white mt-8 ml-8">
         <div>
           <Link
             to="/"
-            className={`${activeLink === "home" ? `${classes.active}` : ""}`}
+            className={`${activeLink === "home" ? "" : ""}`}
             onClick={() => handleSetActiveLink("home")}
           >
             <img src={logo} alt="" />
@@ -61,8 +60,8 @@ const Header = () => {
           >
             <span className="font-bold">02</span> Crew
           </Link>
-          <a
-            href="#"
+          <Link
+           to="/technology"
             className={`${
               activeLink === "technology"
                 ? "border-b-2 border-white shadow"
@@ -71,7 +70,7 @@ const Header = () => {
             onClick={() => handleSetActiveLink("technology")}
           >
             <span className="font-bold">03</span> Technology
-          </a>
+          </Link>
         </div>
       </div>
     </header>

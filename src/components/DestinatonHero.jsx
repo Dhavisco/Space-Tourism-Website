@@ -18,7 +18,7 @@ const DestinatonHero = () => {
     <div className="hero" style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="text-white pt-[5rem] grid lg:grid-cols-1 gap-4 column w-[100%] h-[100vh] font-sans items-center content-center px-[8rem]">
         <div className="uppercase font-sans tracking-widest font-semibold text-[#ffffffe1] text-2xl">
-          01 <span className="ml-2">Pick your destination</span>
+          01 <span className="ml-2 text-white">Pick your destination</span>
         </div>
         <div className="grid grid-cols-2 justify-center items-center">
           <div className="w-2/3">

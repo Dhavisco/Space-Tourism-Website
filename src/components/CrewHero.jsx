@@ -21,7 +21,7 @@ const CrewHero = () => {
     <div className="hero" style={{ backgroundImage: `url(${bgimg})` }}>
       <div className="text-white pt-[5rem] grid lg:grid-cols-1 gap-3 column w-[100%] h-[100vh] font-sans items-center content-center px-[10rem]">
         <div className="uppercase font-sans tracking-widest font-semibold text-[#ffffffe1] text-2xl">
-          02 <span className="ml-2">Meet your crew</span>
+          02 <span className="ml-2 text-white">Meet your crew</span>
         </div>
         <div className="grid grid-cols-2 justify-center items-center">
           {currentCrewDetails && (
@@ -39,7 +39,7 @@ const CrewHero = () => {
                 <div className="dots flex items-center gap-3">
                   {crew.map((_, index) => (
                     <div
-                      className={`dot ${
+                      className={`dot-crew ${
                         index === currentCrewIndex ? "active" : ""
                       }`}
                       key={index}

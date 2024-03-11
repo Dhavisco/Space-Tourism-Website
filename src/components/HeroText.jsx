@@ -2,11 +2,11 @@ const HeroText = () => {
   return (
     <>
       <div className="text-white grid lg:grid-cols-2 gap-8 column w-[100%] h-[100vh] font-sans items-center  content-center px-[8rem]">
-        <div className="flex flex-col justify-center gap-8 mt-[10rem]">
+        <div className="flex flex-col justify-center mt-[7rem]">
           <div className="uppercase font-sans tracking-widest text-[#ffffffe1]">
-            01 Pick your destination
+            So, you want to travel to
           </div>
-          <div className="font-light uppercase font-serif text-8xl tracking-[0.8rem]">
+          <div className="font-light uppercase font-serif text-[7rem] tracking-[0.8rem]">
             Space
           </div>
           <div className="tracking-wide w-5/6 font-light text-[#ffffffe0] text-justify leading-relaxed font-sans">
