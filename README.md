@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Space Tourism Website](./screenshot/sociallinkscode.png)
+![Space Tourism Website](./screenshot/preview.jpg)
 
 
 ### Links
