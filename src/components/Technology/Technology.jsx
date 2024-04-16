@@ -1,10 +1,12 @@
-import DestinationHero from "./DestinationHero";
-import bgimgdesk from "../assets/destination/background-destination-desktop.jpg";
-import bgimgmob from "../assets/destination/background-destination-mobile.jpg";
-import "../App.css";
+
+import TechnologyHero from './TechnologyHero'
+import bgimgdesk from "../../assets/technology/background-technology-desktop.jpg";
+import bgimgtab from "../../assets/technology/background-technology-tablet.jpg";
+import bgimgmob from "../../assets/technology/background-technology-mobile.jpg";
+import "../../App.css";
 import { useState, useEffect } from "react";
 
-const Destination = () => {
+const Technology = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
 
@@ -13,6 +15,8 @@ const Destination = () => {
     const width = window.innerWidth;
     if (width <= 768) {
       return "mobile";
+    } else if (width <= 1024) {
+      return "tablet";
     } else {
       return "desktop";
     }
@@ -37,6 +41,9 @@ const Destination = () => {
     case "mobile":
       backgroundImage = bgimgmob;
       break;
+    case "tablet":
+      backgroundImage = bgimgtab;
+      break;
     default:
       backgroundImage = bgimgdesk;
       break;
@@ -48,10 +55,10 @@ const Destination = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div>
-        <DestinationHero />
+        <TechnologyHero />
       </div>
     </div>
   );
 };
 
-export default Destination
+export default Technology

@@ -1,12 +1,11 @@
-
-import TechnologyHero from './TechnologyHero'
-import bgimgdesk from "../assets/technology/background-technology-desktop.jpg";
-import bgimgtab from "../assets/technology/background-technology-tablet.jpg";
-import bgimgmob from "../assets/technology/background-technology-mobile.jpg";
-import "../App.css";
+import HeroText from "./HeroText";
+import bgimgdesk from "../../assets/home/background-home-desktop.jpg"
+import bgimgtab from "../../assets/home/background-home-tablet.jpg";
+import bgimgmob from "../../assets/home/background-home-mobile.jpg";
+import "../../App.css";
 import { useState, useEffect } from "react";
 
-const Technology = () => {
+const Hero = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
 
@@ -55,10 +54,10 @@ const Technology = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div>
-        <TechnologyHero />
+        <HeroText />
       </div>
     </div>
   );
-};
+}
 
-export default Technology
+export default Hero

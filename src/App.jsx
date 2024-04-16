@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Destination from "./components/Destination";
-import Index from "./components/Index";
-import Crew from "./components/Crew"
-import Technology from "./components/Technology";
+import Destination from "./components/Destination/Destination";
+import Index from "./components/Home/Index";
+import Crew from "./components/Crew/Crew";
+import Technology from "./components/Technology/Technology";
 
 function App() {
   return (

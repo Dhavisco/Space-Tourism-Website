@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data from "./store/data.json";
+import data from "../store/data.json";
 import "./TechnologyHero.css";
 
 const TechnologyHero = () => {

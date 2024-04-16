@@ -1,6 +1,6 @@
 import { useState } from "react";
-import data from "./store/data.json";
-import "../App.css";
+import data from "../store/data.json";
+import "../../App.css";
 
 const DestinationHero = () => {
   const [currentDestination, setCurrentDestination] = useState("Moon");

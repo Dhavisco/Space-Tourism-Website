@@ -1,11 +1,11 @@
-import HeroText from "./HeroText";
-import bgimgdesk from "../assets/home/background-home-desktop.jpg"
-import bgimgtab from "../assets/home/background-home-tablet.jpg";
-import bgimgmob from "../assets/home/background-home-mobile.jpg";
-import "../App.css";
+import CrewHero from "./CrewHero"
+import bgimgdesk from "../../assets/crew/background-crew-desktop.jpg";
+import bgimgtab from "../../assets/crew/background-crew-tablet.jpg";
+import bgimgmob from "../../assets/crew/background-crew-mobile.jpg";
+import "../../App.css";
 import { useState, useEffect } from "react";
 
-const Hero = () => {
+const Crew = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
 
@@ -54,10 +54,10 @@ const Hero = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div>
-        <HeroText />
+        <CrewHero />
       </div>
     </div>
   );
-}
+};
 
-export default Hero
+export default Crew

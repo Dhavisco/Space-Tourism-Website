@@ -1,11 +1,10 @@
-import CrewHero from "./CrewHero"
-import bgimgdesk from "../assets/crew/background-crew-desktop.jpg"
-import bgimgtab from "../assets/crew/background-crew-tablet.jpg"
-import bgimgmob from "../assets/crew/background-crew-mobile.jpg";
-import "../App.css";
+import DestinationHero from "./DestinationHero";
+import bgimgdesk from "../../assets/destination/background-destination-desktop.jpg";
+import bgimgmob from "../../assets/destination/background-destination-mobile.jpg";
+import "../../App.css";
 import { useState, useEffect } from "react";
 
-const Crew = () => {
+const Destination = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
 
@@ -14,8 +13,6 @@ const Crew = () => {
     const width = window.innerWidth;
     if (width <= 768) {
       return "mobile";
-    } else if (width <= 1024) {
-      return "tablet";
     } else {
       return "desktop";
     }
@@ -40,9 +37,6 @@ const Crew = () => {
     case "mobile":
       backgroundImage = bgimgmob;
       break;
-    case "tablet":
-      backgroundImage = bgimgtab;
-      break;
     default:
       backgroundImage = bgimgdesk;
       break;
@@ -54,10 +48,10 @@ const Crew = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div>
-        <CrewHero />
+        <DestinationHero />
       </div>
     </div>
   );
 };
 
-export default Crew
+export default Destination
