@@ -15,9 +15,12 @@ const DestinationHero = () => {
     const intervalId = setInterval(()=>{
       const currentIndex = destinations.findIndex(d => d.name === currentDestination);
       const nextIndex = (currentIndex + 1) % destinations.length;
-      
-    })
-  })
+      setCurrentDestination(destinations[nextIndex].name);
+    }, 3000); // changes every 2 seconds
+
+    return () => clearInterval(intervalId); //clear intercal on component unmount
+
+  }, [currentDestination, destinations]);
 
 
 
