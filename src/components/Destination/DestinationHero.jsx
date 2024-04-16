@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../store/data.json";
 import "../../App.css";
 
@@ -10,7 +10,14 @@ const DestinationHero = () => {
     (destination) => destination.name === currentDestination
   );
 
-  //function to change stylE
+  //Auto  Scroll Animation
+  useEffect(()=>{
+    const intervalId = setInterval(()=>{
+      const currentIndex = destinations.findIndex(d => d.name === currentDestination);
+      const nextIndex = (currentIndex + 1) % destinations.length;
+      
+    })
+  })
 
 
 
