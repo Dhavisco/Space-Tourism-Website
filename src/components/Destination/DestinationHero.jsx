@@ -20,7 +20,7 @@ const DestinationHero = () => {
 
     return () => clearInterval(intervalId); //clear intercal on component unmount
 
-  }, [currentDestination, destinations]);
+  }, [currentDestination, destinations]); // dependency
 
 
 
