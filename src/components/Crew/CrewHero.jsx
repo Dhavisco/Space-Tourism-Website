@@ -12,9 +12,10 @@ const CrewHero = () => {
   // Use effect for auto scrolling
 useEffect(()=>{
   const intervalId = setInterval(()=>{
-    const currentIndex = crew.findIndex(c=> c.index === currentCrewIndex)
-    
-  })
+    const currentIndex = crew.findIndex(c=> c.name === currentCrewIndex)
+    const nextIndex = (currentIndex + 1) % crew.length;
+    setCurrentCrewIndex(crew[nextIndex].name);
+  }, 3000);
 })
 
   // Function to handle crew member change
