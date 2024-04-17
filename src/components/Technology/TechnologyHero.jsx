@@ -13,7 +13,7 @@ const TechnologyHero = () => {
     setcurrentTechIndex(nextIndex);
  },3000)
 
-//  return () => clearInterval(intervalId);
+ return () => clearInterval(intervalId);
 
   },[currentTechIndex, tech.length])
 
