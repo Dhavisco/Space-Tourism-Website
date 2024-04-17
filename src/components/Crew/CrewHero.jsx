@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../store/data.json";
 import "./CrewHero.css"
 
@@ -8,6 +8,11 @@ const CrewHero = () => {
   const crew = data.crew;
   // Find the current crew object
   // const currentCrewDetails = crew.find((crew) => crew.role === currentCrew);
+
+  // Use effect for auto scrolling
+useEffect(()=>{
+  
+})
 
   // Function to handle crew member change
   const handleCrewChange = (index) => {
