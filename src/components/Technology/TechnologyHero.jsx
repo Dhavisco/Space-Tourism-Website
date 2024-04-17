@@ -13,8 +13,9 @@ const TechnologyHero = () => {
     setcurrentTechIndex(nextIndex);
  },3000)
 
- 
-  })
+//  return () => clearInterval(intervalId);
+
+  },[currentTechIndex, tech.length])
 
   // Function to handle tech change
   const handletechChange = (index) => {
