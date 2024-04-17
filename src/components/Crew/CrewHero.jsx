@@ -12,17 +12,17 @@ const CrewHero = () => {
   // Use effect for auto scrolling
 useEffect(()=>{
   const intervalId = setInterval(() => {
-    const currentIndex = crew.findIndex((c) => c.name === currentCrewIndex);
-    const nextIndex = (currentIndex + 1) % crew.length;
-    setCurrentCrewIndex(crew[nextIndex].name);
+    const nextIndex = (currentCrewIndex + 1) % crew.length;
+    setCurrentCrewIndex(nextIndex);
   }, 3000);
 
   return () => clearInterval(intervalId); //clear interval on component unmount
-})
+}, [currentCrewIndex, crew.length]);
 
   // Function to handle crew member change
   const handleCrewChange = (index) => {
     setCurrentCrewIndex(index);
+
   };
 
   const currentCrewDetails = crew[currentCrewIndex];
