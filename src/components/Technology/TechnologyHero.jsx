@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../store/data.json";
 import "./TechnologyHero.css";
 
 const TechnologyHero = () => {
   const [currentTechIndex, setcurrentTechIndex] = useState(0); // Initially display the first tech
   const tech = data.technology;
+
+  //Use Effect 
+  useEffect(()=>{
+
+  })
 
   // Function to handle tech change
   const handletechChange = (index) => {
