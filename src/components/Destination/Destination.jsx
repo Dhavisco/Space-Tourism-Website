@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 const Destination = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
+    const [loading, setLoading] = useState(true);
 
   // Function to get screen size based on window width
   function getScreenSize() {
@@ -26,8 +27,10 @@ const Destination = () => {
   // Add event listener when component mounts
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+     const timer = setTimeout(() => setLoading(false), 1000);
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearTimeout(timer);
     };
   });
 
