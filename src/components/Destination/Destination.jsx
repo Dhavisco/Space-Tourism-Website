@@ -3,6 +3,7 @@ import bgimgdesk from "../../assets/destination/background-destination-desktop.j
 import bgimgmob from "../../assets/destination/background-destination-mobile.jpg";
 import "../../App.css";
 import { useState, useEffect } from "react";
+import Loading from "../../Loading";
 
 const Destination = () => {
   // Use state to track the screen size
@@ -33,6 +34,10 @@ const Destination = () => {
       clearTimeout(timer);
     };
   });
+
+   if (loading) {
+     return <Loading />;
+   }
 
   // Determine background image based on screen size
   let backgroundImage;
