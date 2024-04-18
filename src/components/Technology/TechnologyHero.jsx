@@ -11,7 +11,7 @@ const TechnologyHero = () => {
  const intervalId = setInterval(()=>{
   const nextIndex = (currentTechIndex + 1) % tech.length;
     setcurrentTechIndex(nextIndex);
- },3000)
+ },5000)
 
  return () => clearInterval(intervalId);
 
