@@ -4,10 +4,12 @@ import bgimgtab from "../../assets/crew/background-crew-tablet.jpg";
 import bgimgmob from "../../assets/crew/background-crew-mobile.jpg";
 import "../../App.css";
 import { useState, useEffect } from "react";
+import Loading from "../../Loading";
 
 const Crew = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
+  const [loading, setLoading] = useState(true);
 
   // Function to get screen size based on window width
   function getScreenSize() {
@@ -29,10 +31,16 @@ const Crew = () => {
   // Add event listener when component mounts
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearTimeout(timer);
     };
   });
+
+  if (loading) {
+    return <Loading/>;
+  }
 
   // Determine background image based on screen size
   let backgroundImage;
