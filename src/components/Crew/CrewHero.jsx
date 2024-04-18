@@ -14,7 +14,7 @@ useEffect(()=>{
   const intervalId = setInterval(() => {
     const nextIndex = (currentCrewIndex + 1) % crew.length;
     setCurrentCrewIndex(nextIndex);
-  }, 3000);
+  }, 15000);
 
   return () => clearInterval(intervalId); //clear interval on component unmount
 }, [currentCrewIndex, crew.length]);
