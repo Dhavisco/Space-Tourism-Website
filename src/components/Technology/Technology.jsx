@@ -1,14 +1,18 @@
 
 import TechnologyHero from './TechnologyHero'
+import Loading from '../../Loading';
 import bgimgdesk from "../../assets/technology/background-technology-desktop.jpg";
 import bgimgtab from "../../assets/technology/background-technology-tablet.jpg";
 import bgimgmob from "../../assets/technology/background-technology-mobile.jpg";
+
 import "../../App.css";
 import { useState, useEffect } from "react";
 
 const Technology = () => {
   // Use state to track the screen size
   const [screenSize, setScreenSize] = useState(getScreenSize());
+
+  const [loading, setLoading] = useState(true);
 
   // Function to get screen size based on window width
   function getScreenSize() {
@@ -30,10 +34,17 @@ const Technology = () => {
   // Add event listener when component mounts
   useEffect(() => {
     window.addEventListener("resize", handleResize);
+    const timer = setTimeout(() => setLoading(false), 1000);
+
     return () => {
       window.removeEventListener("resize", handleResize);
+      clearTimeout(timer);
     };
   });
+
+  if (loading) {
+    return <Loading />;
+  }
 
   // Determine background image based on screen size
   let backgroundImage;
