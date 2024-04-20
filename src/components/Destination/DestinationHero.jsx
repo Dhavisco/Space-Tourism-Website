@@ -68,7 +68,7 @@ const DestinationHero = () => {
               <div className="flex gap-8 lg:justify-between md:gap-20 lg:items-start items-center">
                 <div>
                   <p className="lg:text-sm text-xs font-light">AVG. DISTANCE</p>
-                  <h1 className="lg:text-4xl text-2xl uppercase">
+                  <h1 className="lg:text-4xl text-2xl tracking-[0.1rem] uppercase">
                     {currentDestinationDetails.distance}
                   </h1>
                 </div>
