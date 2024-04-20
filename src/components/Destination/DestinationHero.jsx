@@ -16,7 +16,7 @@ const DestinationHero = () => {
       const currentIndex = destinations.findIndex(d => d.name === currentDestination);
       const nextIndex = (currentIndex + 1) % destinations.length;
       setCurrentDestination(destinations[nextIndex].name);
-    }, 13000); // changes every 3 seconds
+    }, 10000); // changes every 3 seconds
 
     return () => clearInterval(intervalId); //clear intercal on component unmount
 
@@ -44,7 +44,7 @@ const DestinationHero = () => {
               <nav>
                 {destinations.map((destination) => (
                   <button
-                    className={`lg:mx-4 mx-2 py-2 font-light hover:font-normal ${
+                    className={`lg:mx-4 mx-2 py-2 font-light tracking-[0.1rem] hover:font-normal ${
                       currentDestination === destination.name
                         ? "border-b-2 border-white" // Active link style
                         : "hover:border-b-2 hover:border-[#ffffffd3]" // Hover style for non-active links
