@@ -56,7 +56,7 @@ const DestinationHero = () => {
                   </button>
                 ))}
               </nav>
-              <div className="dname font-light uppercase font-serif sm:text-6xl lg:text-8xl tracking-[0.8rem]">
+              <div className="dname font-light uppercase font-serif sm:text-6xl lg:text-8xl tracking-[0.7rem]">
                 {currentDestinationDetails.name}
               </div>
               <div className="d-desc lg:w-4/5 w-6/7 md:w-4/5 font-light text-sm lg:text-base text-[#ffffffe0] text-justify lg:leading-relaxed font-sans">
