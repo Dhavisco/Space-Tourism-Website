@@ -76,7 +76,7 @@ const DestinationHero = () => {
                   <p className="lg:text-sm text-xs font-sans font-light">
                     EST. TRAVEL TIME
                   </p>
-                  <h1 className="lg:text-4xl text-2xl font-serif uppercase font-extralight">
+                  <h1 className="lg:text-4xl text-2xl font-serif uppercase tracking-[0.1rem] font-extralight">
                     {currentDestinationDetails.travel}
                   </h1>
                 </div>
