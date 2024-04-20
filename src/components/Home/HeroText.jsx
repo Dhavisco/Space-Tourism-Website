@@ -8,7 +8,7 @@ const HeroText = () => {
           <div className="uppercase font-sans text-sm md:text-lg tracking-widest text-[#ffffffe1]">
             So, you want to travel to
           </div>
-          <div className="font-light uppercase font-serif lg:text-[7rem] text-6xl  tracking-[0.8rem]">
+          <div className="font-light uppercase font-serif lg:text-[7rem] text-6xl  tracking-[0.7rem]">
             Space
           </div>
           <div className="tracking-wide md:w-5/6 font-light text-sm sm:text-sm text-[#ffffffe0] text-justify md:leading-relaxed font-sans">
