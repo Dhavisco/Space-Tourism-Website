@@ -44,10 +44,10 @@ const DestinationHero = () => {
               <nav>
                 {destinations.map((destination) => (
                   <button
-                    className={`lg:mx-4 mx-2 py-2 font-light tracking-[0.1rem] hover:font-normal ${
+                    className={`lg:mx-4 mx-2 py-[0.4rem] font-light tracking-[0.1rem] hover:font-normal ${
                       currentDestination === destination.name
-                        ? "border-b-4 border-yellow-600" // Active link style
-                        : "hover:border-b-2 hover:border-yellow-700" // Hover style for non-active links
+                        ? "border-b-4 border-yellow-700" // Active link style
+                        : "hover:border-b-4 hover:border-yellow-600" // Hover style for non-active links
                     } transition-all duration-200`}
                     key={destination.name}
                     onClick={() => setCurrentDestination(destination.name)}
