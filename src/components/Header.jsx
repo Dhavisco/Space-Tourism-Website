@@ -29,8 +29,8 @@ const Header = () => {
             </div>
             <nav
               className={`sm:flex font-sans text-[#ffffffec] gap-1 md:justify-between md:items-center text-sm lg:text-lg tracking-wide lg:px-16 md:px-5 lg:w-[65%] md:pr-[5rem] lg:pr-[6rem] ${
-                isMenuOpen ? "flex flex-col sm:flex-row" : "hidden"
-              }  lg:bg-[#e0e0e01c] lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-lg lg:shadow-md uppercase`}
+                isMenuOpen ? "flex flex-col sm:flex-row nav-show" : "hidden"
+              }  lg:bg-[#e0e0e01c] lg:bg-clip-padding lg:backdrop-filter lg:backdrop-blur-lg lg:shadow-md uppercase nav-animate`}
             >
               <Link
                 to="/"

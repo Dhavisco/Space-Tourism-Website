@@ -6,3 +6,15 @@
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
     }
 }
+
+.nav-animate {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.nav-show {
+  max-height: 500px; /* Adjust based on your content size */
+  opacity: 1;
+}
