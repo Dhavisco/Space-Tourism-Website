@@ -17,7 +17,7 @@ Apply best practices for web accessibility to ensure that the website is usable 
 
 ### The challenge
 Users should be able to:
-- View the optimal layout for the site depending on their device's screen size
+- View the optimal layout for the site depending on their device's screen size. (Desktop, Mobile)
 - See hover states for all interactive elements on the page
 - Function properly
 
