@@ -46,8 +46,8 @@ const DestinationHero = () => {
                   <button
                     className={`lg:mx-4 mx-2 py-[0.4rem] font-light tracking-[0.1rem] ${
                       currentDestination === destination.name
-                        ? "border-b-4 hover:font-normal border-yellow-700 " // Active link style
-                        : "" // Hover style for non-active links
+                        ? "border-b-4 font-normal border-yellow-700" // Active link style
+                        : "hover:font-normal" // Hover style for non-active links
                     } transition-all duration-200`}
                     key={destination.name}
                     onClick={() => setCurrentDestination(destination.name)}
