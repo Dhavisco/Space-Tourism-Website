@@ -44,9 +44,9 @@ const DestinationHero = () => {
               <nav>
                 {destinations.map((destination) => (
                   <button
-                    className={`lg:mx-4 mx-2 py-[0.4rem] font-light tracking-[0.1rem] hover:font-normal ${
+                    className={`lg:mx-4 mx-2 py-[0.4rem] font-light tracking-[0.1rem] ${
                       currentDestination === destination.name
-                        ? "border-b-4 border-yellow-700" // Active link style
+                        ? "border-b-4 hover:font-normal border-yellow-700 " // Active link style
                         : "" // Hover style for non-active links
                     } transition-all duration-200`}
                     key={destination.name}
@@ -68,7 +68,7 @@ const DestinationHero = () => {
               <div className="flex gap-8 lg:justify-between md:gap-20 lg:items-start items-center">
                 <div>
                   <p className="lg:text-sm text-xs font-light">AVG. DISTANCE</p>
-                  <h1 className="lg:text-4xl text-2xl tracking-[0.1rem] uppercase">
+                  <h1 className="lg:text-4xl text-xl tracking-[0.1rem] uppercase">
                     {currentDestinationDetails.distance}
                   </h1>
                 </div>
@@ -76,7 +76,7 @@ const DestinationHero = () => {
                   <p className="lg:text-sm text-xs font-sans font-light">
                     EST. TRAVEL TIME
                   </p>
-                  <h1 className="lg:text-4xl text-2xl font-serif uppercase tracking-[0.1rem] font-extralight">
+                  <h1 className="lg:text-4xl text-xl font-serif uppercase tracking-[0.1rem] font-extralight">
                     {currentDestinationDetails.travel}
                   </h1>
                 </div>
